@@ -115,7 +115,7 @@ const DashHome = ({homechange, planchange, Transactions}) => {
                                 </div>
                                 <div className="DashHomeMainContentAccSummaryRow2Box">
                                     <div className="DashHomeMainContentAccSummaryRow2BoxL">
-                                        <h4>Total Widthdrawal</h4>
+                                        <h4>Total Widthdraw</h4>
                                         <h3>$ &nbsp;{userData?.totalWithdrawal}.00</h3>
                                         <span style={{fontWeight:"700"}}>{roundedNumber6}BTC</span>
                                     </div>
