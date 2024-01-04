@@ -13,7 +13,7 @@ const PersonalSettings = ({data}) => {
 
   const userinfo = {fullName, userName, phoneNumber}
 
-    const updateuserurl = `https://swiftearnprime.vercel.app/api/userdata/${data._id}`
+    const updateuserurl = `https://ot-swift-earnprime-back-end.vercel.app/api/userdata/${data._id}`
     const upDateUser = () => {
         setButtonDisabled(true)
         axios.patch(updateuserurl, userinfo)

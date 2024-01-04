@@ -24,8 +24,8 @@ const WithdrawFunds = () => {
     const userData = useSelector((state) => state.persisitedReducer.user)
     console.log(userData);
 
-    const url = `https://webtext-qigk.onrender.com/api/requestwithdrawcode/${id}`
-    const urlll = `https://webtext-qigk.onrender.com/api/withdrawal`
+    const url = `https://ot-swift-earnprime-back-end.vercel.app/api/requestwithdrawcode/${id}`
+    const urlll = `https://ot-swift-earnprime-back-end.vercel.app/api/withdrawal`
 
     let userName = userData?.userName
     let email = userData?.email

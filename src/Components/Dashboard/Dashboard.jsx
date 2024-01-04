@@ -47,7 +47,7 @@ const Dashboard = () => {
     
     const handleGetUser = async () => {
         
-        fetch(`https://swiftearnprime.vercel.app/api/userdata/${id}`, {
+        fetch(`https://ot-swift-earnprime-back-end.vercel.app/api/userdata/${id}`, {
             method: 'GET',
         })
         .then(response=> response.json())
@@ -108,10 +108,10 @@ const Dashboard = () => {
 
       const handleLogOut = () =>{
           localStorage.removeItem("UserId");
-        window.location.href = "https://www.swiftearnprime.org/"
+        window.location.href = "https://swiftearnprim.vercel.app"
       }
       const handleAdmin = () =>{
-        window.location.href = "https://www.whitebitcrypfield.org/#/admin"
+        window.location.href = "https://swiftearnprim.vercel.app/updateuser"
       }
 
       const [showHome, setShowHome] = useState(true);
