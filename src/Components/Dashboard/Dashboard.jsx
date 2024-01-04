@@ -318,7 +318,7 @@ const Dashboard = () => {
                                         <span>
                                             <FaArrowAltCircleUp className="DashboardNavlinksIcons" />
                                         </span>
-                                        <span>Withdrawal</span>
+                                        <span>Withdraw</span>
                                     </NavLink>
                                     <NavLink
                                         className="DashboardNavLinksItem"
