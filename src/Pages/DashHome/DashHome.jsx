@@ -79,7 +79,7 @@ const DashHome = ({homechange, planchange, Transactions}) => {
                                         <span style={{fontWeight:"700"}}>{roundedNumber2}BTC</span>
                                     </div>
                                     <div className="DashHomeMainContentAccSummaryRow1BoxR">
-                                        <img src={lineChart} alt="" />
+                                        <img src={lineChart} alt="" /> 
                                     </div>
                                 </div>
                                 <div className="DashHomeMainContentAccSummaryRow1Box">
