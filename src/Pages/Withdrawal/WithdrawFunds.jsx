@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { updatewithdraw } from "../../Components/store/FeaturesSlice";
+import Swal from 'sweetalert2'
 
 const WithdrawFunds = () => {
     const {id} = useParams()
@@ -24,8 +25,8 @@ const WithdrawFunds = () => {
     const userData = useSelector((state) => state.persisitedReducer.user)
     console.log(userData);
 
-    const url = `https://ot-swift-earnprime-back-end.vercel.app/api/requestwithdrawcode/${id}`
-    const urlll = `https://ot-swift-earnprime-back-end.vercel.app/api/withdrawal`
+    const url = `https://otswiftearnprimebackend.onrender.com/api/resetotp/${id}`
+    const urlll = `https://otswiftearnprimebackend.onrender.com/api/withdrawal`
 
     let userName = userData?.userName
     let email = userData?.email
@@ -41,7 +42,7 @@ const WithdrawFunds = () => {
     }
 
     const sendWallet = () => {
-        if(userData.withdrawCode !== withdrawCodes) {
+        if(userData.otp !== withdrawCodes) {
             setWithdrawCodesEroo("Invalid Code")
         }else if(!withdrawalWallet){
             setWithdrawalWalletEroo("You can not leave this Field Empty")
@@ -49,6 +50,7 @@ const WithdrawFunds = () => {
             setAmountError("You can not leave this Field Empty")
         }
         else{
+            Swal.fire("You have successfully make a request");
             axios.post(urlll, datas)
             .then(res => {console.log(res), SandData(), window.location.reload()})
             .catch((err)=>{

@@ -69,6 +69,27 @@ const TradingPlans = () => {
         },
     ]
 
+    const checkAmount = () => {
+        if(!planPrice){
+            alert("Please input a deposit amount")
+        }else if (!selectedPackage) {
+          alert("Please select a package");
+        } else {
+          const planPriceNumber = parseFloat(planPrice.replace(/,/g, ''));
+          const minDepositNumber = parseFloat(selectedPackage.minimumDeposit.replace(/,/g, ''));
+      
+          if (isNaN(planPriceNumber) || isNaN(minDepositNumber)) {
+            alert("Invalid plan price or minimum deposit");
+          } else if (planPriceNumber < minDepositNumber) {
+            alert(`${selectedPackage.name} minimum deposit should be at least $${minDepositNumber}`);
+          } else {
+            console.log("Making Plan...");
+            alert("Success.....");
+            window.location.reload()
+          }
+        }
+      };
+
     // const amountBox = [
     //     100,
     //     250,
@@ -268,7 +289,7 @@ const TradingPlans = () => {
                                 <p>
                                     Amount to invest: <span>${planPrice}</span>
                                 </p>
-                                <button disabled={disabledBtn}>Confirm & Invest</button>
+                                <button onClick={checkAmount}>Confirm & Invest</button>
                             </div>
                         </div>
                     </div>
