@@ -28,7 +28,6 @@ const Payment = () => {
             dateCreated: new Date().toDateString(),
         }
     const dispatch = useDispatch()
-    // console.log(depositData)
 
     const [state, setState] = useState({
         value: `${paymentname === "BITCOINP PAYMENT"? ("bc1qyu5w6vhuq0dl2dxqyv0jfkufc4u3c4fn32t806"): paymentname === "ETHEREUM PAYMENT"? ("0xc73FFEE4638Ab835533BDd507097DC5320Ff24c9"): paymentname === "BNB PAYMENT"? ("bnb150pl6unlc9ad0e4k6wwlqp0rhalxn75tzrg800"): paymentname === "TRON PAYMENT"? ("TC4oPit2XmpNeTGN2NH1Ue5UU2y6JCdeGq"): paymentname === "SOLANA PAYMENT"? ("3ijNSWC1bWX7dT2cWHrk5ywFPSRRDTgRgEunLRLkSn8w"):"Chosse a Payment Method"}`,
