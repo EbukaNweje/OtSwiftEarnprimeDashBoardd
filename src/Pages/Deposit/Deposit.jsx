@@ -10,6 +10,7 @@ const Deposit = () => {
     const [eth, setEth] = useState(false)
     const [doge, setDoge] = useState(false)
     const [bnb, setbnb] = useState(false)
+    const [Solana, setSolana] = useState(false)
     const [isButtonDisabled, setButtonDisabled] = useState(true);
 
     const handleAmount = (e) => {
@@ -42,12 +43,17 @@ const Deposit = () => {
             setEth(false)
             setBitcoin(false)
             setbnb(false)
-            nav(`payment/DOGECOIN PAYMENT`)
+            nav(`payment/TRON PAYMENT`)
         } else if(bnb === true) {
             setDoge(false)
             setBitcoin(false)
             setEth(false)
             nav(`payment/BNB PAYMENT`)
+        } else if(Solana === true) {
+            setDoge(false)
+            setBitcoin(false)
+            setEth(false)
+            nav(`payment/SOLANA PAYMENT`)
         }  
     }
    
@@ -75,6 +81,7 @@ const Deposit = () => {
                                         setEth(false),
                                         setbnb(false)
                                         setButtonDisabled(false)
+                                        setSolana(false)
                                     }}
                                 />
                             </div>
@@ -87,11 +94,12 @@ const Deposit = () => {
                                         setEth(true),
                                         setbnb(false)
                                         setButtonDisabled(false)
+                                        setSolana(false)
                                     }}
                                 />
                             </div>
-                            {/* <div className="DepositContentLeftDownInput">
-                                <span>DOGECOIN PAYMENT</span>
+                            <div className="DepositContentLeftDownInput">
+                                <span>TRON PAYMENT</span>
                                 <input type="radio"  name="b"
                                     onChange={()=>{
                                         setBitcoin(false),
@@ -99,10 +107,11 @@ const Deposit = () => {
                                         setEth(false),
                                         setbnb(false)
                                         setButtonDisabled(false)
+                                        setSolana(false)
                                     }}
                                 />
-                            </div> */}
-                            {/* <div className="DepositContentLeftDownInput">
+                            </div>
+                            <div className="DepositContentLeftDownInput">
                                 <span>BNB PAYMENT</span>
                                 <input type="radio"  name="b"
                                     onChange={()=>{
@@ -111,9 +120,23 @@ const Deposit = () => {
                                         setEth(false),
                                         setbnb(true)
                                         setButtonDisabled(false)
+                                        setSolana(false)
                                     }}
                                 />
-                            </div> */}
+                            </div>
+                            <div className="DepositContentLeftDownInput">
+                                <span>SOLANA PAYMENT</span>
+                                <input type="radio"  name="b"
+                                    onChange={()=>{
+                                        setBitcoin(false),
+                                        setDoge(false),
+                                        setEth(false),
+                                        setbnb(false)
+                                        setButtonDisabled(false)
+                                        setSolana(true)
+                                    }}
+                                />
+                            </div>
                                 <button 
                                      disabled={isButtonDisabled}
                                      style={{background: `${isButtonDisabled ? "#E0E0E5" : "#0E4152"}`}}
