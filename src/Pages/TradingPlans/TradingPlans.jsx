@@ -27,7 +27,7 @@ const TradingPlans = () => {
             name: 'Bronze Package',
             duration: 7,
             price: "9,999",
-            minimumDeposit: "3,000",
+            minimumDeposit: "1,000",
             maximunDeposit: "9,999",
             minimumReturn: "325",
             maximumReturn: "325",
